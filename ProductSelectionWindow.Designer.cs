@@ -170,6 +170,7 @@
             // 
             // tableLayoutPanelShop
             // 
+            this.tableLayoutPanelShop.AutoScroll = true;
             this.tableLayoutPanelShop.BackColor = System.Drawing.Color.WhiteSmoke;
             this.tableLayoutPanelShop.ColumnCount = 3;
             this.tableLayoutPanelShop.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 30F));
@@ -237,8 +238,8 @@
             // 
             // ProductSelectionWindow
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(684, 461);
             this.Controls.Add(this.labelUnit);
