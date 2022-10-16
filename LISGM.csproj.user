@@ -4,6 +4,9 @@
     <_LastSelectedProfileId>C:\Users\o7kro\Desktop\LogisticsSystemProject\LISGM\LISGM\Properties\PublishProfiles\FolderProfile.pubxml</_LastSelectedProfileId>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Update="AuthorizationsWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="ChoiceOfCarrierWindow.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -13,13 +16,10 @@
     <Compile Update="OrderEditingWindow.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="ProductSelectionWindow.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Update="AuthorizationsWindow.cs">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Update="OrderWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="ProductSelectionWindow.cs">
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>

@@ -363,5 +363,10 @@
         {
             fillingOrderField(0);
         }
+
+        private void OrderWindow_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

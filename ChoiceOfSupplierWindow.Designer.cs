@@ -105,7 +105,7 @@
             this.groupBoxSupplier.Controls.Add(this.tableLayoutPanelSupplier);
             this.groupBoxSupplier.Location = new System.Drawing.Point(12, 57);
             this.groupBoxSupplier.Name = "groupBoxSupplier";
-            this.groupBoxSupplier.Size = new System.Drawing.Size(760, 370);
+            this.groupBoxSupplier.Size = new System.Drawing.Size(760, 333);
             this.groupBoxSupplier.TabIndex = 13;
             this.groupBoxSupplier.TabStop = false;
             this.groupBoxSupplier.Text = "Поставщики";
@@ -125,15 +125,15 @@
             this.tableLayoutPanelSupplier.Name = "tableLayoutPanelSupplier";
             this.tableLayoutPanelSupplier.RowCount = 1;
             this.tableLayoutPanelSupplier.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
-            this.tableLayoutPanelSupplier.Size = new System.Drawing.Size(754, 348);
+            this.tableLayoutPanelSupplier.Size = new System.Drawing.Size(754, 311);
             this.tableLayoutPanelSupplier.TabIndex = 0;
             // 
             // ChoiceOfSupplierWindow
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(784, 461);
+            this.ControlBox = false;
             this.Controls.Add(this.groupBoxSupplier);
             this.Controls.Add(this.buttonClose);
             this.Controls.Add(this.label3);

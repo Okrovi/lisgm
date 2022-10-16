@@ -223,7 +223,7 @@
             this.groupBoxItem.ForeColor = System.Drawing.Color.Black;
             this.groupBoxItem.Location = new System.Drawing.Point(232, 191);
             this.groupBoxItem.Name = "groupBoxItem";
-            this.groupBoxItem.Size = new System.Drawing.Size(740, 418);
+            this.groupBoxItem.Size = new System.Drawing.Size(740, 403);
             this.groupBoxItem.TabIndex = 17;
             this.groupBoxItem.TabStop = false;
             this.groupBoxItem.Text = "Заказанные товары";
@@ -231,6 +231,7 @@
             // tableLayoutPanelAddedGoods
             // 
             this.tableLayoutPanelAddedGoods.AutoScroll = true;
+            this.tableLayoutPanelAddedGoods.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.tableLayoutPanelAddedGoods.BackColor = System.Drawing.Color.WhiteSmoke;
             this.tableLayoutPanelAddedGoods.ColumnCount = 8;
             this.tableLayoutPanelAddedGoods.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 30F));
@@ -246,7 +247,7 @@
             this.tableLayoutPanelAddedGoods.Name = "tableLayoutPanelAddedGoods";
             this.tableLayoutPanelAddedGoods.RowCount = 1;
             this.tableLayoutPanelAddedGoods.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
-            this.tableLayoutPanelAddedGoods.Size = new System.Drawing.Size(734, 396);
+            this.tableLayoutPanelAddedGoods.Size = new System.Drawing.Size(734, 381);
             this.tableLayoutPanelAddedGoods.TabIndex = 0;
             // 
             // listBoxDetailsSupplier
@@ -443,10 +444,10 @@
             // 
             // OrderEditingWindow
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(984, 661);
+            this.ControlBox = false;
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.buttonSaveDataInFile);
             this.Controls.Add(this.buttonOrderComlection);
@@ -468,9 +469,12 @@
             this.Controls.Add(this.buttonValueCarrier);
             this.Controls.Add(this.buttonValueSupplier);
             this.Controls.Add(this.buttonSave);
+            this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(1000, 700);
+            this.MinimizeBox = false;
             this.MinimumSize = new System.Drawing.Size(1000, 700);
             this.Name = "OrderEditingWindow";
+            this.ShowIcon = false;
             this.Text = "OrderEditingWindow";
             this.Load += new System.EventHandler(this.OrderEditingWindow_Load);
             this.panel1.ResumeLayout(false);

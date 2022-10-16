@@ -238,10 +238,10 @@
             // 
             // ProductSelectionWindow
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(684, 461);
+            this.ControlBox = false;
             this.Controls.Add(this.labelUnit);
             this.Controls.Add(this.buttonAddProduct);
             this.Controls.Add(this.labelAmount);

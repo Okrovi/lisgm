@@ -126,10 +126,10 @@
             // 
             // AuthorizationsWindow
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(984, 561);
+            this.ControlBox = false;
             this.Controls.Add(this.pictureBox);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);

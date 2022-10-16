@@ -318,8 +318,7 @@
             // 
             // OrderWindow
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1184, 661);
             this.Controls.Add(this.labelAreaNamfeField);
@@ -327,7 +326,9 @@
             this.Controls.Add(this.panel1);
             this.MinimumSize = new System.Drawing.Size(1200, 700);
             this.Name = "OrderWindow";
+            this.ShowIcon = false;
             this.Text = "Заказы";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.OrderWindow_FormClosed);
             this.Load += new System.EventHandler(this.OrderWindow_Load);
             this.panel1.ResumeLayout(false);
             this.flowLayoutPanel1.ResumeLayout(false);

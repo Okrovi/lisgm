@@ -3,9 +3,9 @@
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
     <TargetFramework>net6.0-windows</TargetFramework>
-	<PublishSingleFile>true</PublishSingleFile>
+	<PublishSingleFile>false</PublishSingleFile>
 	<RuntimeIdentifier>win-x64</RuntimeIdentifier>
-	<PublishReadyToRun>true</PublishReadyToRun>
+	<PublishReadyToRun>false</PublishReadyToRun>
     <Nullable>enable</Nullable>
     <UseWindowsForms>true</UseWindowsForms>
     <ImplicitUsings>enable</ImplicitUsings>
@@ -13,7 +13,7 @@
     <Platforms>AnyCPU;x64</Platforms>
     <StartupObject>LISGM.Program</StartupObject>
     <NoWin32Manifest>true</NoWin32Manifest>
-    <IsPublishable>False</IsPublishable>
+    <IsPublishable>true</IsPublishable>
     <ApplicationIcon>icons\face.ico</ApplicationIcon>
     <DebugType>none</DebugType>
     <ProduceReferenceAssembly>False</ProduceReferenceAssembly>
@@ -22,6 +22,7 @@
     <EnableNETAnalyzers>False</EnableNETAnalyzers>
     <BaseOutputPath>C:\Users\o7kro\Desktop\LogisticsSystemProject\application</BaseOutputPath>
     <GeneratePackageOnBuild>False</GeneratePackageOnBuild>
+    <PlatformTarget>AnyCPU</PlatformTarget>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">

@@ -111,7 +111,7 @@
             this.groupBoxCarrier.ForeColor = System.Drawing.Color.Black;
             this.groupBoxCarrier.Location = new System.Drawing.Point(12, 55);
             this.groupBoxCarrier.Name = "groupBoxCarrier";
-            this.groupBoxCarrier.Size = new System.Drawing.Size(760, 370);
+            this.groupBoxCarrier.Size = new System.Drawing.Size(760, 338);
             this.groupBoxCarrier.TabIndex = 6;
             this.groupBoxCarrier.TabStop = false;
             this.groupBoxCarrier.Text = "Перевозчики";
@@ -131,7 +131,7 @@
             this.tableLayoutPanelCarrier.Name = "tableLayoutPanelCarrier";
             this.tableLayoutPanelCarrier.RowCount = 1;
             this.tableLayoutPanelCarrier.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
-            this.tableLayoutPanelCarrier.Size = new System.Drawing.Size(754, 348);
+            this.tableLayoutPanelCarrier.Size = new System.Drawing.Size(754, 316);
             this.tableLayoutPanelCarrier.TabIndex = 0;
             // 
             // buttonClose
@@ -147,10 +147,10 @@
             // 
             // ChoiceOfCarrierWindow
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(784, 461);
+            this.ControlBox = false;
             this.Controls.Add(this.buttonClose);
             this.Controls.Add(this.groupBoxCarrier);
             this.Controls.Add(this.buttonShow);
