@@ -242,7 +242,6 @@
             this.tableLayoutPanelAddedGoods.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 60F));
             this.tableLayoutPanelAddedGoods.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 60F));
             this.tableLayoutPanelAddedGoods.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-            this.tableLayoutPanelAddedGoods.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanelAddedGoods.Location = new System.Drawing.Point(3, 19);
             this.tableLayoutPanelAddedGoods.Name = "tableLayoutPanelAddedGoods";
             this.tableLayoutPanelAddedGoods.RowCount = 1;
@@ -444,7 +443,8 @@
             // 
             // OrderEditingWindow
             // 
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(984, 661);
             this.ControlBox = false;

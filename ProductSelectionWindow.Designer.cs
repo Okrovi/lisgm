@@ -176,7 +176,6 @@
             this.tableLayoutPanelShop.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 30F));
             this.tableLayoutPanelShop.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 150F));
             this.tableLayoutPanelShop.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-            this.tableLayoutPanelShop.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanelShop.Location = new System.Drawing.Point(3, 19);
             this.tableLayoutPanelShop.Name = "tableLayoutPanelShop";
             this.tableLayoutPanelShop.RowCount = 1;
@@ -238,7 +237,8 @@
             // 
             // ProductSelectionWindow
             // 
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(684, 461);
             this.ControlBox = false;

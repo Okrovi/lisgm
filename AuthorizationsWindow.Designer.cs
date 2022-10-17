@@ -43,7 +43,7 @@
             // textBox1
             // 
             this.textBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBox1.Location = new System.Drawing.Point(391, 221);
+            this.textBox1.Location = new System.Drawing.Point(391, 209);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(200, 23);
             this.textBox1.TabIndex = 0;
@@ -51,7 +51,7 @@
             // textBox2
             // 
             this.textBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBox2.Location = new System.Drawing.Point(391, 250);
+            this.textBox2.Location = new System.Drawing.Point(391, 238);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(200, 23);
             this.textBox2.TabIndex = 1;
@@ -62,7 +62,7 @@
             this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(90)))), ((int)(((byte)(166)))));
             this.button1.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(391, 295);
+            this.button1.Location = new System.Drawing.Point(391, 283);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(200, 27);
             this.button1.TabIndex = 2;
@@ -73,7 +73,7 @@
             // button2
             // 
             this.button2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button2.Location = new System.Drawing.Point(391, 328);
+            this.button2.Location = new System.Drawing.Point(391, 316);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(200, 27);
             this.button2.TabIndex = 3;
@@ -86,7 +86,7 @@
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(246, 225);
+            this.label1.Location = new System.Drawing.Point(246, 213);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(128, 19);
             this.label1.TabIndex = 4;
@@ -97,7 +97,7 @@
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label2.Location = new System.Drawing.Point(315, 254);
+            this.label2.Location = new System.Drawing.Point(315, 242);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(59, 19);
             this.label2.TabIndex = 5;
@@ -109,7 +109,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label3.ForeColor = System.Drawing.Color.IndianRed;
-            this.label3.Location = new System.Drawing.Point(391, 175);
+            this.label3.Location = new System.Drawing.Point(391, 163);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(0, 19);
             this.label3.TabIndex = 6;
@@ -126,7 +126,8 @@
             // 
             // AuthorizationsWindow
             // 
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(984, 561);
             this.ControlBox = false;
