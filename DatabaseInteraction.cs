@@ -10,106 +10,99 @@ namespace LISGM
         DataDB dataDB = new DataDB();
 
         public DatabaseInteraction()
-        {
-            if (configurationData.loadConf() == -1)
+        {            
+            try
             {
-                MessageBox.Show("Проблема с сохранением файла конфигурации!", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                IPAdressDB = configurationData.ValueFromConf("IPDB");
+                PortDB = configurationData.ValueFromConf("PORTDB");
+                loginToConnect = configurationData.ValueFromConf("LOGINTOCONNECT");
+                passwordToConnect = configurationData.ValueFromConf("PASSTOCONNECT");
+                nameDB = configurationData.ValueFromConf("NAMEDB");
+
+                EMPPOSMANAGER = configurationData.ValueFromConf("EMPPOSMANAGER");
+                EMPPOSLOGISTITCIAN = configurationData.ValueFromConf("EMPPOSLOGISTICIAN");
+                EMPPOSADMIN = configurationData.ValueFromConf("EMPPOSADMIN");
+
+                POSNAMESUPPLIER = configurationData.ValueFromConf("POSNAMESUPPLIER");
+
+                userappTable = "\"" + configurationData.ValueFromConf("USERAPPTABLE") + "\"";
+                empposTable = "\"" + configurationData.ValueFromConf("EMPPOSTABLE") + "\"";
+                categoryProdTable = "\"" + configurationData.ValueFromConf("CATEGORYPRODTABLE") + "\"";
+                productTable = "\"" + configurationData.ValueFromConf("PRODUCTTABLE") + "\"";
+                priceProdTable = "\"" + configurationData.ValueFromConf("PRICEPRODTABLE") + "\"";
+                counterpartyTable = "\"" + configurationData.ValueFromConf("COUNTERPARTYTABLE") + "\"";
+                typeCounterpartyTable = "\"" + configurationData.ValueFromConf("TYPECOUNTERPARTYTABLE") + "\"";
+                typeShopTable = "\"" + configurationData.ValueFromConf("TYPESHOPTABLE") + "\"";
+                unitProdTable = "\"" + configurationData.ValueFromConf("UNITPRODTABLE") + "\"";
+                shopTable = "\"" + configurationData.ValueFromConf("SHOPTABLE") + "\"";
+                orderTable = "\"" + configurationData.ValueFromConf("ORDERTABLE") + "\"";
+                prodOrderTable = "\"" + configurationData.ValueFromConf("PRODORDERTABLE") + "\"";
+
+                idUser = "\"" + configurationData.ValueFromConf("IDUSER") + "\"";
+                idEmployeesPositionFK = "\"" + configurationData.ValueFromConf("IDEMPLOYEESPOSITIONFK") + "\"";
+                surnameUser = "\"" + configurationData.ValueFromConf("SURNAMEUSER") + "\"";
+                firstnameUser = "\"" + configurationData.ValueFromConf("FIRSTNAMEUSER") + "\"";
+                patronymicUser = "\"" + configurationData.ValueFromConf("PATRONYMICUSER") + "\"";
+                phonenumberUser = "\"" + configurationData.ValueFromConf("PHONENUMBERUSER") + "\"";
+                emailUser = "\"" + configurationData.ValueFromConf("EMAILUSER") + "\"";
+                loginUser = "\"" + configurationData.ValueFromConf("LOGINUSER") + "\"";
+                passwordUser = "\"" + configurationData.ValueFromConf("PASSWORDUSER") + "\"";
+
+                idEmpPos = "\"" + configurationData.ValueFromConf("IDEMPPOS") + "\"";
+                nameEmpPos = "\"" + configurationData.ValueFromConf("NAMEEMPPOS") + "\"";
+
+                idCategoryProd = "\"" + configurationData.ValueFromConf("IDCATEGORYPROD") + "\"";
+                nameCategoryProd = "\"" + configurationData.ValueFromConf("NAMECATEGORYPROD") + "\"";
+
+                nameGoods = "\"" + configurationData.ValueFromConf("NAMEGOODS") + "\"";
+                idCategoryProdFK = "\"" + configurationData.ValueFromConf("IDCATEGORYPRODFK") + "\"";
+                idProd = "\"" + configurationData.ValueFromConf("IDPROD") + "\"";
+                idUnitFK = "\"" + configurationData.ValueFromConf("IDUNITFK") + "\"";
+                occupiedVolueProd = "\"" + configurationData.ValueFromConf("OCCUPUIEDVOLUMEPROD") + "\"";
+
+                idProdFK = "\"" + configurationData.ValueFromConf("IDPRODFK") + "\"";
+                idCounterpartyFK = "\"" + configurationData.ValueFromConf("IDCOUNTERPARTYFK") + "\"";
+                priceProd = "\"" + configurationData.ValueFromConf("PRICEPROD") + "\"";
+
+                idCounterparty = "\"" + configurationData.ValueFromConf("IDCOUNTERPARTY") + "\"";
+                idTypeCounterpartyFK = "\"" + configurationData.ValueFromConf("IDTYPECOUNTERPARTYFK") + "\"";
+                nameCounterparty = "\"" + configurationData.ValueFromConf("NAMECOUNTERPARTY") + "\"";
+                indexCounterparty = "\"" + configurationData.ValueFromConf("INDEXCOUNTERPARTY") + "\"";
+                locationCounterparty = "\"" + configurationData.ValueFromConf("LOCATIONCOUNTERPARTY") + "\"";
+                streetCounterparty = "\"" + configurationData.ValueFromConf("STREETCOUNTERPARTY") + "\"";
+                buildingCounterparty = "\"" + configurationData.ValueFromConf("BUILDINGCOUNTERPARTY") + "\"";
+                houseCounterparty = "\"" + configurationData.ValueFromConf("HOUSECOUNTERPARTY") + "\"";
+                officeCounterparty = "\"" + configurationData.ValueFromConf("OFFICECOUNTERPARTY") + "\"";
+                INNCounterparty = "\"" + configurationData.ValueFromConf("INNCOUNTERPARTY") + "\"";
+                BICCounterparty = "\"" + configurationData.ValueFromConf("BICCOUNTERPARTY") + "\"";
+                numberphoneCounterparty = "\"" + configurationData.ValueFromConf("NUMBERPHONECOUNTERPARTY") + "\"";
+                emailCounterparty = "\"" + configurationData.ValueFromConf("EMAILCOUNTERPARTY") + "\"";
+                minVolumeCarrier = "\"" + configurationData.ValueFromConf("MINVOLUMECARRIER") + "\"";
+                maxVolumeCarrier = "\"" + configurationData.ValueFromConf("MAXVOLUMECARRIER") + "\"";
+
+                idTypeCounterparty = "\"" + configurationData.ValueFromConf("IDTYPECOUNTERPARTY") + "\"";
+                nameTypeCounterparty = "\"" + configurationData.ValueFromConf("NAMETYPECOUNTERPARTY") + "\"";
+
+                idTypeShop = "\"" + configurationData.ValueFromConf("IDTYPESHOP") + "\"";
+                nameTypeShop = "\"" + configurationData.ValueFromConf("NAMETYPESHOP") + "\"";
+
+                idUnit = "\"" + configurationData.ValueFromConf("IDUNIT") + "\"";
+                nameUnit = "\"" + configurationData.ValueFromConf("NAMEUNIT") + "\"";
+
+                idShop = "\"" + configurationData.ValueFromConf("IDSHOP") + "\"";
+                idTypeShopFK = "\"" + configurationData.ValueFromConf("IDTYPESHOPFK") + "\"";
+                locationShop = "\"" + configurationData.ValueFromConf("LOCATIONSHOP") + "\"";
+                streetShop = "\"" + configurationData.ValueFromConf("STREETSHOP") + "\"";
+                buildingShop = "\"" + configurationData.ValueFromConf("BUILDINGSHOP") + "\"";
+                houseShop = "\"" + configurationData.ValueFromConf("HOUSESHOP") + "\"";
+                nameShop = "\"" + configurationData.ValueFromConf("NAMESHOP") + "\"";
+
+                rowsReceived = Int32.Parse(configurationData.ValueFromConf("ROWSRECEIVED"));
             }
-            else
+            catch
             {
-                try
-                {
-                    IPAdressDB = configurationData.ValueFromConf("IPDB");
-                    PortDB = configurationData.ValueFromConf("PORTDB");
-                    loginToConnect = configurationData.ValueFromConf("LOGINTOCONNECT");
-                    passwordToConnect = configurationData.ValueFromConf("PASSTOCONNECT");
-                    nameDB = configurationData.ValueFromConf("NAMEDB");
-
-                    EMPPOSMANAGER = configurationData.ValueFromConf("EMPPOSMANAGER");
-                    EMPPOSLOGISTITCIAN = configurationData.ValueFromConf("EMPPOSLOGISTICIAN");
-                    EMPPOSADMIN = configurationData.ValueFromConf("EMPPOSADMIN");
-
-                    POSNAMESUPPLIER = configurationData.ValueFromConf("POSNAMESUPPLIER");
-
-                    userappTable = "\"" + configurationData.ValueFromConf("USERAPPTABLE") + "\"";
-                    empposTable = "\"" + configurationData.ValueFromConf("EMPPOSTABLE") + "\"";
-                    categoryProdTable = "\"" + configurationData.ValueFromConf("CATEGORYPRODTABLE") + "\"";
-                    productTable = "\"" + configurationData.ValueFromConf("PRODUCTTABLE") + "\"";
-                    priceProdTable = "\"" + configurationData.ValueFromConf("PRICEPRODTABLE") + "\"";
-                    counterpartyTable = "\"" + configurationData.ValueFromConf("COUNTERPARTYTABLE") + "\"";
-                    typeCounterpartyTable = "\"" + configurationData.ValueFromConf("TYPECOUNTERPARTYTABLE") + "\"";
-                    typeShopTable = "\"" + configurationData.ValueFromConf("TYPESHOPTABLE") + "\"";
-                    unitProdTable = "\"" + configurationData.ValueFromConf("UNITPRODTABLE") + "\"";
-                    shopTable = "\"" + configurationData.ValueFromConf("SHOPTABLE") + "\"";
-                    orderTable = "\"" + configurationData.ValueFromConf("ORDERTABLE") + "\"";
-                    prodOrderTable = "\"" + configurationData.ValueFromConf("PRODORDERTABLE") + "\"";
-
-                    idUser = "\"" + configurationData.ValueFromConf("IDUSER") + "\"";
-                    idEmployeesPositionFK = "\"" + configurationData.ValueFromConf("IDEMPLOYEESPOSITIONFK") + "\"";
-                    surnameUser = "\"" + configurationData.ValueFromConf("SURNAMEUSER") + "\"";
-                    firstnameUser = "\"" + configurationData.ValueFromConf("FIRSTNAMEUSER") + "\"";
-                    patronymicUser = "\"" + configurationData.ValueFromConf("PATRONYMICUSER") + "\"";
-                    phonenumberUser = "\"" + configurationData.ValueFromConf("PHONENUMBERUSER") + "\"";
-                    emailUser = "\"" + configurationData.ValueFromConf("EMAILUSER") + "\"";
-                    loginUser = "\"" + configurationData.ValueFromConf("LOGINUSER") + "\"";
-                    passwordUser = "\"" + configurationData.ValueFromConf("PASSWORDUSER") + "\"";
-
-                    idEmpPos = "\"" + configurationData.ValueFromConf("IDEMPPOS") + "\"";
-                    nameEmpPos = "\"" + configurationData.ValueFromConf("NAMEEMPPOS") + "\"";
-
-                    idCategoryProd = "\"" + configurationData.ValueFromConf("IDCATEGORYPROD") + "\"";
-                    nameCategoryProd = "\"" + configurationData.ValueFromConf("NAMECATEGORYPROD") + "\"";
-
-                    nameGoods = "\"" + configurationData.ValueFromConf("NAMEGOODS") + "\"";
-                    idCategoryProdFK = "\"" + configurationData.ValueFromConf("IDCATEGORYPRODFK") + "\"";
-                    idProd = "\"" + configurationData.ValueFromConf("IDPROD") + "\"";
-                    idUnitFK = "\"" + configurationData.ValueFromConf("IDUNITFK") + "\"";
-                    occupiedVolueProd = "\"" + configurationData.ValueFromConf("OCCUPUIEDVOLUMEPROD") + "\"";
-
-                    idProdFK = "\"" + configurationData.ValueFromConf("IDPRODFK") + "\"";
-                    idCounterpartyFK = "\"" + configurationData.ValueFromConf("IDCOUNTERPARTYFK") + "\"";
-                    priceProd = "\"" + configurationData.ValueFromConf("PRICEPROD") + "\"";
-
-                    idCounterparty = "\"" + configurationData.ValueFromConf("IDCOUNTERPARTY") + "\"";
-                    idTypeCounterpartyFK = "\"" + configurationData.ValueFromConf("IDTYPECOUNTERPARTYFK") + "\"";
-                    nameCounterparty = "\"" + configurationData.ValueFromConf("NAMECOUNTERPARTY") + "\"";
-                    indexCounterparty = "\"" + configurationData.ValueFromConf("INDEXCOUNTERPARTY") + "\"";
-                    locationCounterparty = "\"" + configurationData.ValueFromConf("LOCATIONCOUNTERPARTY") + "\"";
-                    streetCounterparty = "\"" + configurationData.ValueFromConf("STREETCOUNTERPARTY") + "\"";
-                    buildingCounterparty = "\"" + configurationData.ValueFromConf("BUILDINGCOUNTERPARTY") + "\"";
-                    houseCounterparty = "\"" + configurationData.ValueFromConf("HOUSECOUNTERPARTY") + "\"";
-                    officeCounterparty = "\"" + configurationData.ValueFromConf("OFFICECOUNTERPARTY") + "\"";
-                    INNCounterparty = "\"" + configurationData.ValueFromConf("INNCOUNTERPARTY") + "\"";
-                    BICCounterparty = "\"" + configurationData.ValueFromConf("BICCOUNTERPARTY") + "\"";
-                    numberphoneCounterparty = "\"" + configurationData.ValueFromConf("NUMBERPHONECOUNTERPARTY") + "\"";
-                    emailCounterparty = "\"" + configurationData.ValueFromConf("EMAILCOUNTERPARTY") + "\"";
-                    minVolumeCarrier = "\"" + configurationData.ValueFromConf("MINVOLUMECARRIER") + "\"";
-                    maxVolumeCarrier = "\"" + configurationData.ValueFromConf("MAXVOLUMECARRIER") + "\"";
-
-                    idTypeCounterparty = "\"" + configurationData.ValueFromConf("IDTYPECOUNTERPARTY") + "\"";
-                    nameTypeCounterparty = "\"" + configurationData.ValueFromConf("NAMETYPECOUNTERPARTY") + "\"";
-
-                    idTypeShop = "\"" + configurationData.ValueFromConf("IDTYPESHOP") + "\"";
-                    nameTypeShop = "\"" + configurationData.ValueFromConf("NAMETYPESHOP") + "\"";
-
-                    idUnit = "\"" + configurationData.ValueFromConf("IDUNIT") + "\"";
-                    nameUnit = "\"" + configurationData.ValueFromConf("NAMEUNIT") + "\"";
-
-                    idShop = "\"" + configurationData.ValueFromConf("IDSHOP") + "\"";
-                    idTypeShopFK = "\"" + configurationData.ValueFromConf("IDTYPESHOPFK") + "\"";
-                    locationShop = "\"" + configurationData.ValueFromConf("LOCATIONSHOP") + "\"";
-                    streetShop = "\"" + configurationData.ValueFromConf("STREETSHOP") + "\"";
-                    buildingShop = "\"" + configurationData.ValueFromConf("BUILDINGSHOP") + "\"";
-                    houseShop = "\"" + configurationData.ValueFromConf("HOUSESHOP") + "\"";
-                    nameShop = "\"" + configurationData.ValueFromConf("NAMESHOP") + "\"";
-
-                    rowsReceived = Int32.Parse(configurationData.ValueFromConf("ROWSRECEIVED"));
-                }
-                catch
-                {
-                    MessageBox.Show("Проблема с файлом конфигурации!", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }                
-            }            
+                MessageBox.Show("Проблема с файлом конфигурации!", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }          
         }
 
         // Database connection data

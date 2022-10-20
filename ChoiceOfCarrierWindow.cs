@@ -54,7 +54,7 @@
                 string minmaxvolume;
                 string adressCarrier;
 
-                tableLayoutPanelCarrier.Controls.Clear();
+                flowLayoutPanelListCarrier.Controls.Clear();
 
                 for (int i = 0; i < dataDB.columnCount; i++)
                 {
@@ -109,19 +109,29 @@
                     Button buttonChoiseCarrier = new Button();
                     buttonChoiseCarrier.Name = dataDB.receivedData[i == 0 ? columnId : columnId = columnId + dataDB.columnCount];
                     buttonChoiseCarrier.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(90)))), ((int)(((byte)(166)))));
-                    buttonChoiseCarrier.ForeColor = System.Drawing.Color.White;
+                    buttonChoiseCarrier.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+                    buttonChoiseCarrier.ForeColor = System.Drawing.Color.Transparent;
+                    buttonChoiseCarrier.Location = new System.Drawing.Point(3, 3);
+                    buttonChoiseCarrier.Size = new System.Drawing.Size(80, 23);
                     buttonChoiseCarrier.Click += buttonChoiceCarrier_Click;
+                    buttonChoiseCarrier.Text = "Выбор";
 
                     minmaxvolume = "";
                     minmaxvolume = minmaxvolume + dataDB.receivedData[i == 0 ? columnMinVol : columnMinVol = columnMinVol + dataDB.columnCount] + " // ";
                     minmaxvolume = minmaxvolume + dataDB.receivedData[i == 0 ? columnMaxVol : columnMaxVol = columnMaxVol + dataDB.columnCount];
                     TextBox textBoxMinMaxVolume = new TextBox();
                     textBoxMinMaxVolume.Text = minmaxvolume;
-                    textBoxMinMaxVolume.Dock = DockStyle.Fill;
+                    textBoxMinMaxVolume.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+                    textBoxMinMaxVolume.Location = new System.Drawing.Point(89, 4);
+                    textBoxMinMaxVolume.Name = "textBoxMinMaxVolume";
+                    textBoxMinMaxVolume.Size = new System.Drawing.Size(80, 22);
 
                     TextBox textBoxNameProvider = new TextBox();
                     textBoxNameProvider.Text = dataDB.receivedData[i == 0 ? columnName : columnName = columnName + dataDB.columnCount];
-                    textBoxNameProvider.Dock = DockStyle.Fill;
+                    textBoxNameProvider.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+                    textBoxNameProvider.Location = new System.Drawing.Point(175, 5);
+                    textBoxNameProvider.Name = "textBoxNameProvider";
+                    textBoxNameProvider.Size = new System.Drawing.Size(200, 22);
 
                     adressCarrier = "";
                     adressCarrier = adressCarrier + dataDB.receivedData[i == 0 ? columnLocation : columnLocation = columnLocation + dataDB.columnCount] + " ";
@@ -131,12 +141,21 @@
                     adressCarrier = adressCarrier + dataDB.receivedData[i == 0 ? columnOffice : columnOffice = columnOffice + dataDB.columnCount] + " ";
                     TextBox textBoxAdressCarrier = new TextBox();
                     textBoxAdressCarrier.Text = adressCarrier;
-                    textBoxAdressCarrier.Dock = DockStyle.Fill;
+                    textBoxAdressCarrier.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+                    textBoxAdressCarrier.Location = new System.Drawing.Point(381, 5);
+                    textBoxAdressCarrier.Name = "textBoxAdressCarrier";
+                    textBoxAdressCarrier.Size = new System.Drawing.Size(364, 22);
 
-                    tableLayoutPanelCarrier.Controls.Add(buttonChoiseCarrier);
-                    tableLayoutPanelCarrier.Controls.Add(textBoxMinMaxVolume);
-                    tableLayoutPanelCarrier.Controls.Add(textBoxNameProvider);
-                    tableLayoutPanelCarrier.Controls.Add(textBoxAdressCarrier);
+                    Panel panelSelectionInstance = new Panel();
+                    panelSelectionInstance.Controls.Add(buttonChoiseCarrier);
+                    panelSelectionInstance.Controls.Add(textBoxMinMaxVolume);
+                    panelSelectionInstance.Controls.Add(textBoxNameProvider);
+                    panelSelectionInstance.Controls.Add(textBoxAdressCarrier);
+                    panelSelectionInstance.Location = new System.Drawing.Point(3, 3);
+                    panelSelectionInstance.Name = "panelSelectionInstance";
+                    panelSelectionInstance.Size = new System.Drawing.Size(748, 31);
+
+                    flowLayoutPanelListCarrier.Controls.Add(panelSelectionInstance);
                 }
             }
             else

@@ -40,9 +40,9 @@ namespace LISGM
             return listBoxDetailsCarrier;
         }
 
-        public TableLayoutPanel tableProducts()
+        public FlowLayoutPanel tableProducts()
         {
-            return tableLayoutPanelAddedGoods;
+            return flowLayoutPanelListProd;
         }
 
         private void buttonExit_Click(object sender, EventArgs e)
@@ -77,14 +77,14 @@ namespace LISGM
 
         private void buttonRemItem_Click(object sender, EventArgs e)
         {
-            int countRows = tableLayoutPanelAddedGoods.Controls.Count / 8;
-            int positionCheckBox = 0;
+            int countRows = flowLayoutPanelListProd.Controls.Count;
 
-            if(tableLayoutPanelAddedGoods.Controls.Count >= 8)
+            if(countRows > 0)
             {
                 for (int i = 0; i < countRows; i++)
                 {
-                    Control checkBox = tableLayoutPanelAddedGoods.Controls[positionCheckBox];
+                    Panel currentSelectionInstance = (Panel)flowLayoutPanelListProd.Controls[i];
+                    Control checkBox = currentSelectionInstance.Controls[0];
                     CheckBox checkBoxDetails = (CheckBox)checkBox;
 
                     if (checkBoxDetails.Checked == true)
@@ -95,9 +95,9 @@ namespace LISGM
                             {
                                 goodsInOrderDeliting[j] = new string[4];
                                 goodsInOrderDeliting[j][0] = dataOrder.id;
-                                goodsInOrderDeliting[j][1] = tableLayoutPanelAddedGoods.Controls[positionCheckBox].Name;
-                                goodsInOrderDeliting[j][2] = tableLayoutPanelAddedGoods.Controls[positionCheckBox + 3].Name;
-                                goodsInOrderDeliting[j][3] = tableLayoutPanelAddedGoods.Controls[positionCheckBox + 5].Text;
+                                goodsInOrderDeliting[j][1] = currentSelectionInstance.Controls[0].Name;
+                                goodsInOrderDeliting[j][2] = currentSelectionInstance.Controls[3].Name;
+                                goodsInOrderDeliting[j][3] = currentSelectionInstance.Controls[5].Text;
                                 break;
                             }
 
@@ -106,19 +106,16 @@ namespace LISGM
                                 MessageBox.Show("Превышено количество изменений в заказе, сохраните изменения!", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
                             }
                         }
-                        
-                        for (int j = 0; j < 8; j++)
-                        {
-                            tableLayoutPanelAddedGoods.Controls.RemoveAt(positionCheckBox);                            
-                        }
+
+                        flowLayoutPanelListProd.Controls.RemoveAt(i);
+                        i--;
+                        countRows--;
 
                         continue;
                     }
-
-                    positionCheckBox = positionCheckBox + 8;
                 }
 
-                if(tableLayoutPanelAddedGoods.Controls.Count == 0)
+                if(flowLayoutPanelListProd.Controls.Count == 0)
                 {
                     buttonValueSupplier.Enabled = true;
                 }
@@ -146,7 +143,7 @@ namespace LISGM
             int columnStatusDelivery = 0;
             int columnStatusProcess = 0;
 
-            tableLayoutPanelAddedGoods.Controls.Clear();
+            flowLayoutPanelListProd.Controls.Clear();
 
             for (int i = 0; i < dataDB.columnCount; i++)
             {
@@ -362,53 +359,83 @@ namespace LISGM
                 goodsInOrder[i][7] = dataDB.receivedData[i == 0 ? columnAmountDeliveredProd : columnAmountDeliveredProd = columnAmountDeliveredProd + dataDB.columnCount];
                 goodsInOrder[i][8] = dataDB.receivedData[i == 0 ? columnStatusDeliveryProd : columnStatusDeliveryProd = columnStatusDeliveryProd + dataDB.columnCount];
 
-                CheckBox checkBox = new CheckBox();
-                checkBox.Name = goodsInOrder[i][0];
+                CheckBox checkBoxChoiceProd = new CheckBox();
+                checkBoxChoiceProd.Name = goodsInOrder[i][0];
                 if(goodsInOrder[i][8] == databaseInteraction.TEXTSTATUSPRODUCTEND)
                 {
-                    checkBox.Enabled = false;
+                    checkBoxChoiceProd.Enabled = false;
                 }
-                checkBox.Dock = DockStyle.Top;
+                checkBoxChoiceProd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(90)))), ((int)(((byte)(166)))));
+                checkBoxChoiceProd.CheckAlign = System.Drawing.ContentAlignment.MiddleCenter;
+                checkBoxChoiceProd.Location = new System.Drawing.Point(3, 3);
+                checkBoxChoiceProd.Size = new System.Drawing.Size(15, 14);
+                checkBoxChoiceProd.UseVisualStyleBackColor = false;
 
                 TextBox textBoxProductName = new TextBox();
                 textBoxProductName.Text = goodsInOrder[i][1];
-                textBoxProductName.Dock = DockStyle.Fill;
+                textBoxProductName.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+                textBoxProductName.Location = new System.Drawing.Point(20, 3);
+                textBoxProductName.Name = "textBoxNameProd";
+                textBoxProductName.Size = new System.Drawing.Size(120, 22);
 
                 TextBox textBoxOccupiedVolume = new TextBox();
                 textBoxOccupiedVolume.Text = goodsInOrder[i][2];
-                textBoxOccupiedVolume.Dock = DockStyle.Fill;
+                textBoxOccupiedVolume.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+                textBoxOccupiedVolume.Location = new System.Drawing.Point(141, 3);
+                textBoxOccupiedVolume.Name = "textBoxVolumeProd";
+                textBoxOccupiedVolume.Size = new System.Drawing.Size(60, 22);
 
                 TextBox textBoxShopName = new TextBox();
                 textBoxShopName.Name = goodsInOrder[i][3];
                 textBoxShopName.Text = goodsInOrder[i][4];
-                textBoxShopName.Dock = DockStyle.Fill;
+                textBoxShopName.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+                textBoxShopName.Location = new System.Drawing.Point(202, 3);
+                textBoxShopName.Size = new System.Drawing.Size(120, 22);
 
                 TextBox textBoxShopAdress = new TextBox();
                 textBoxShopAdress.Text = goodsInOrder[i][5];
-                textBoxShopAdress.Dock = DockStyle.Fill;
+                textBoxShopAdress.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+                textBoxShopAdress.Location = new System.Drawing.Point(323, 3);
+                textBoxShopAdress.Name = "textBoxAdress";
+                textBoxShopAdress.Size = new System.Drawing.Size(180, 22);
 
                 TextBox textBoxOrderedQuantity = new TextBox();
                 textBoxOrderedQuantity.Text = dataDB.receivedData[columnAmountProd];
                 textBoxOrderedQuantity.MaxLength = 6;
-                textBoxOrderedQuantity.Dock = DockStyle.Fill;
+                textBoxOrderedQuantity.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+                textBoxOrderedQuantity.Location = new System.Drawing.Point(504, 3);
+                textBoxOrderedQuantity.Name = "textBoxOrderedAmount";
+                textBoxOrderedQuantity.Size = new System.Drawing.Size(60, 22);
 
                 TextBox textBoxQuantityDelivered = new TextBox();
                 textBoxQuantityDelivered.Text = goodsInOrder[i][7];
                 textBoxQuantityDelivered.MaxLength = 6;
-                textBoxQuantityDelivered.Dock = DockStyle.Fill;
+                textBoxQuantityDelivered.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+                textBoxQuantityDelivered.Location = new System.Drawing.Point(565, 3);
+                textBoxQuantityDelivered.Name = "textBoxDeliveredAmount";
+                textBoxQuantityDelivered.Size = new System.Drawing.Size(60, 22);
 
                 TextBox textBoxStatus = new TextBox();
                 textBoxStatus.Text = goodsInOrder[i][8];
-                textBoxStatus.Dock = DockStyle.Fill;
+                textBoxStatus.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+                textBoxStatus.Location = new System.Drawing.Point(627, 3);
+                textBoxStatus.Name = "textBoxStatusOrder";
+                textBoxStatus.Size = new System.Drawing.Size(100, 22);
 
-                tableLayoutPanelAddedGoods.Controls.Add(checkBox);
-                tableLayoutPanelAddedGoods.Controls.Add(textBoxProductName);
-                tableLayoutPanelAddedGoods.Controls.Add(textBoxOccupiedVolume);
-                tableLayoutPanelAddedGoods.Controls.Add(textBoxShopName);
-                tableLayoutPanelAddedGoods.Controls.Add(textBoxShopAdress);
-                tableLayoutPanelAddedGoods.Controls.Add(textBoxOrderedQuantity);
-                tableLayoutPanelAddedGoods.Controls.Add(textBoxQuantityDelivered);
-                tableLayoutPanelAddedGoods.Controls.Add(textBoxStatus);
+                Panel panelSelectionInstance = new Panel();
+                panelSelectionInstance.Controls.Add(checkBoxChoiceProd);
+                panelSelectionInstance.Controls.Add(textBoxProductName);
+                panelSelectionInstance.Controls.Add(textBoxOccupiedVolume);
+                panelSelectionInstance.Controls.Add(textBoxShopName);
+                panelSelectionInstance.Controls.Add(textBoxShopAdress);
+                panelSelectionInstance.Controls.Add(textBoxOrderedQuantity);
+                panelSelectionInstance.Controls.Add(textBoxQuantityDelivered);
+                panelSelectionInstance.Controls.Add(textBoxStatus);
+                panelSelectionInstance.Location = new System.Drawing.Point(3, 3);
+                panelSelectionInstance.Name = "panelSelectionInstance";
+                panelSelectionInstance.Size = new System.Drawing.Size(730, 29);
+
+                flowLayoutPanelListProd.Controls.Add(panelSelectionInstance);
             }
 
             if (dataOrder.statusProcessOrder == databaseInteraction.TEXTSTATUSPROCESSSTART || dataOrder.statusProcessOrder == databaseInteraction.TEXTSTATUSCONFIRMCREATE)
@@ -473,23 +500,21 @@ namespace LISGM
                     }
                     else
                     {
-                        int countRows = tableLayoutPanelAddedGoods.Controls.Count / 8;
-                        int positionCheckBox = 0;
+                        int countRows = flowLayoutPanelListProd.Controls.Count;
 
-                        if (tableLayoutPanelAddedGoods.Controls.Count >= 8)
+                        if (countRows > 0)
                         {
                             for (int i = 0; i < countRows; i++)
                             {
-                                Control checkBox = tableLayoutPanelAddedGoods.Controls[positionCheckBox];
+                                Panel currentSelectionInstance = (Panel)flowLayoutPanelListProd.Controls[i];
+                                Control checkBox = currentSelectionInstance.Controls[0];
                                 CheckBox checkBoxDetails = (CheckBox)checkBox;
 
-                                if (tableLayoutPanelAddedGoods.Controls[positionCheckBox + 7].Text == databaseInteraction.TEXTSTATUSPRODUCTSTART)
+                                if (currentSelectionInstance.Controls[7].Text == databaseInteraction.TEXTSTATUSPRODUCTSTART)
                                 {
                                     buttonDelireved.Enabled = true;
                                     break;
                                 }
-
-                                positionCheckBox = positionCheckBox + 8;
                             }
                         }
                     }
@@ -550,11 +575,14 @@ namespace LISGM
 
             if(saveCount > 0)
             {
-                buttonRemItem.Enabled = saveStateButtaRemItem;
-
                 for(int i = 0; i < saveCount; i++)
                 {
                     dataDB = databaseInteraction.NewProdInOrder(goodsInOrderAdder[i][0],goodsInOrderAdder[i][1],goodsInOrderAdder[i][2],goodsInOrderAdder[i][3],goodsInOrderAdder[i][4]);
+                }
+
+                for (int i = 0; i < saveCount; i++)
+                {
+                    goodsInOrderAdder[i] = null;
                 }
             }
 
@@ -571,12 +599,15 @@ namespace LISGM
 
             if (removeCount > 0)
             {
-                buttonAddItem.Enabled = saveStateButtaAddItem;
-
                 for (int i = 0; i < removeCount; i++)
                 {
                     dataDB = databaseInteraction.RemoveProdInOrder(goodsInOrderDeliting[i][0],goodsInOrderDeliting[i][1],goodsInOrderDeliting[i][2],goodsInOrderDeliting[i][3]);
                 }
+
+                for (int i = 0; i < removeCount; i++)
+                {
+                    goodsInOrderDeliting[i] = null;
+                }                
             }
 
             if (noProblems == 1)
@@ -653,26 +684,26 @@ namespace LISGM
 
             if (result == DialogResult.Yes)
             {
-                int countRows = tableLayoutPanelAddedGoods.Controls.Count / 8;
-                int positionCheckBox = 0;
+                int countRows = flowLayoutPanelListProd.Controls.Count;
 
-                if (tableLayoutPanelAddedGoods.Controls.Count >= 8)
+                if (countRows > 0)
                 {
                     for (int i = 0; i < countRows; i++)
                     {
-                        Control checkBox = tableLayoutPanelAddedGoods.Controls[positionCheckBox];
+                        Panel currentSelectionInstance = (Panel)flowLayoutPanelListProd.Controls[i];
+                        Control checkBox = currentSelectionInstance.Controls[0];
                         CheckBox checkBoxDetails = (CheckBox)checkBox;
 
                         if (checkBoxDetails.Checked == true)
                         {
-                            if(tableLayoutPanelAddedGoods.Controls[positionCheckBox + 6].Text != "")
+                            if(currentSelectionInstance.Controls[6].Text != "")
                             {
                                 try
                                 {
-                                    double value = double.Parse(tableLayoutPanelAddedGoods.Controls[positionCheckBox + 6].Text);
+                                    double value = double.Parse(currentSelectionInstance.Controls[6].Text);
 
                                     Regex regex = new Regex(@",");
-                                    string newstring = regex.Replace(tableLayoutPanelAddedGoods.Controls[positionCheckBox + 6].Text, ".");
+                                    string newstring = regex.Replace(currentSelectionInstance.Controls[6].Text, ".");
 
                                     dataDB = databaseInteraction.ValueChangeSatusDelivered(dataOrder.id, goodsInOrder[i][0], goodsInOrder[i][3], goodsInOrder[i][6], newstring, userApp.id);
                                     if (dataDB.entryCheck != 1)
@@ -681,8 +712,8 @@ namespace LISGM
                                     }
                                     else
                                     {
-                                        tableLayoutPanelAddedGoods.Controls[positionCheckBox].Enabled = false;
-                                        tableLayoutPanelAddedGoods.Controls[positionCheckBox + 7].Text = databaseInteraction.TEXTSTATUSPRODUCTEND;
+                                        currentSelectionInstance.Controls[0].Enabled = false;
+                                        currentSelectionInstance.Controls[7].Text = databaseInteraction.TEXTSTATUSPRODUCTEND;
                                     }
                                 }
                                 catch
@@ -696,8 +727,6 @@ namespace LISGM
                             }
                             
                         }
-
-                        positionCheckBox = positionCheckBox + 8;
                     }
                 }
             }

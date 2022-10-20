@@ -2,12 +2,12 @@
 
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
-    <TargetFramework>net6.0-windows</TargetFramework>
+    <TargetFramework>net6.0-windows7.0</TargetFramework>
 	<PublishSingleFile>false</PublishSingleFile>
 	<RuntimeIdentifier>win-x64</RuntimeIdentifier>
 	<PublishReadyToRun>false</PublishReadyToRun>
     <Nullable>enable</Nullable>
-    <UseWindowsForms>true</UseWindowsForms>
+    <UseWindowsForms>True</UseWindowsForms>
     <ImplicitUsings>enable</ImplicitUsings>
     <Configurations>Debug;Release;MyConfig</Configurations>
     <Platforms>AnyCPU;x64</Platforms>
@@ -15,7 +15,7 @@
     <NoWin32Manifest>true</NoWin32Manifest>
     <IsPublishable>true</IsPublishable>
     <ApplicationIcon>icons\face.ico</ApplicationIcon>
-    <DebugType>none</DebugType>
+    <DebugType>full</DebugType>
     <ProduceReferenceAssembly>False</ProduceReferenceAssembly>
     <RunAnalyzersDuringBuild>True</RunAnalyzersDuringBuild>
     <RunAnalyzersDuringLiveAnalysis>True</RunAnalyzersDuringLiveAnalysis>
@@ -23,15 +23,16 @@
     <BaseOutputPath>C:\Users\o7kro\Desktop\LogisticsSystemProject\application</BaseOutputPath>
     <GeneratePackageOnBuild>False</GeneratePackageOnBuild>
     <PlatformTarget>AnyCPU</PlatformTarget>
+    <SupportedOSPlatformVersion>7.0</SupportedOSPlatformVersion>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
-    <Optimize>False</Optimize>
+    <Optimize>True</Optimize>
     <Deterministic>False</Deterministic>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
-    <Optimize>False</Optimize>
+    <Optimize>True</Optimize>
     <Deterministic>False</Deterministic>
   </PropertyGroup>
 

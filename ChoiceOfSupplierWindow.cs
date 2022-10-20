@@ -60,7 +60,7 @@
                 int columnOffice = 0;
                 string adressSupplier;
 
-                tableLayoutPanelSupplier.Controls.Clear();
+                flowLayoutPanelListSupplier.Controls.Clear();
 
                 for (int i = 0; i < dataDB.columnCount; i++)
                 {
@@ -111,15 +111,26 @@
                     buttonChoiceSupplier.Name = dataDB.receivedData[i == 0 ? columnId : columnId = columnId + dataDB.columnCount];
                     buttonChoiceSupplier.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(90)))), ((int)(((byte)(166)))));
                     buttonChoiceSupplier.ForeColor = System.Drawing.Color.White;
+                    buttonChoiceSupplier.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+                    buttonChoiceSupplier.Location = new System.Drawing.Point(3, 3);
+                    buttonChoiceSupplier.Size = new System.Drawing.Size(80, 23);
+                    buttonChoiceSupplier.Text = "Выбор";
+                    buttonChoiceSupplier.UseVisualStyleBackColor = false;
                     buttonChoiceSupplier.Click += buttonChoiceSupplier_Click;
 
                     TextBox textBoxPrice = new TextBox();
                     textBoxPrice.Text = dataDB.receivedData[i == 0 ? columnPrice : columnPrice = columnPrice + dataDB.columnCount];
-                    textBoxPrice.Dock = DockStyle.Fill;
+                    textBoxPrice.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+                    textBoxPrice.Location = new System.Drawing.Point(89, 5);
+                    textBoxPrice.Name = "textBoxPrice";
+                    textBoxPrice.Size = new System.Drawing.Size(80, 22);
 
                     TextBox textBoxNameSupplier = new TextBox();
                     textBoxNameSupplier.Text = dataDB.receivedData[i == 0 ? columnName : columnName = columnName + dataDB.columnCount];
-                    textBoxNameSupplier.Dock = DockStyle.Fill;
+                    textBoxNameSupplier.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+                    textBoxNameSupplier.Location = new System.Drawing.Point(175, 5);
+                    textBoxNameSupplier.Name = "textBoxName";
+                    textBoxNameSupplier.Size = new System.Drawing.Size(200, 22);
 
                     adressSupplier = "";
                     adressSupplier = adressSupplier + dataDB.receivedData[i == 0 ? columnLocation : columnLocation = columnLocation + dataDB.columnCount] + " ";
@@ -129,12 +140,21 @@
                     adressSupplier = adressSupplier + dataDB.receivedData[i == 0 ? columnOffice : columnOffice = columnOffice + dataDB.columnCount] + " ";
                     TextBox textBoxAdressSupplier = new TextBox();
                     textBoxAdressSupplier.Text = adressSupplier;
-                    textBoxAdressSupplier.Dock = DockStyle.Fill;
+                    textBoxAdressSupplier.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+                    textBoxAdressSupplier.Location = new System.Drawing.Point(381, 5);
+                    textBoxAdressSupplier.Name = "textBoxAdress";
+                    textBoxAdressSupplier.Size = new System.Drawing.Size(364, 22);
 
-                    tableLayoutPanelSupplier.Controls.Add(buttonChoiceSupplier);
-                    tableLayoutPanelSupplier.Controls.Add(textBoxPrice);
-                    tableLayoutPanelSupplier.Controls.Add(textBoxNameSupplier);
-                    tableLayoutPanelSupplier.Controls.Add(textBoxAdressSupplier);
+                    Panel panelSelectionInstance = new Panel();
+                    panelSelectionInstance.Controls.Add(buttonChoiceSupplier);
+                    panelSelectionInstance.Controls.Add(textBoxPrice);
+                    panelSelectionInstance.Controls.Add(textBoxNameSupplier);
+                    panelSelectionInstance.Controls.Add(textBoxAdressSupplier);
+                    panelSelectionInstance.Location = new System.Drawing.Point(3, 3);
+                    panelSelectionInstance.Name = "panelSelectionInstance";
+                    panelSelectionInstance.Size = new System.Drawing.Size(748, 31);
+
+                    flowLayoutPanelListSupplier.Controls.Add(panelSelectionInstance);
                 }
             }
             else

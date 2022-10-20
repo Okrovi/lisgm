@@ -1,0 +1,40 @@
+<Root>
+  <OrderID>58</OrderID>
+  <DateStart>20.10.2022 16:12:37</DateStart>
+  <DateConfirm>20.10.2022 16:24:41</DateConfirm>
+  <Manager>
+    <ID>2</ID>
+  </Manager>
+  <Supplier>
+    <ID>6</ID>
+  </Supplier>
+  <Logistician>
+    <ID>3</ID>
+  </Logistician>
+  <Carrier>
+    <ID>2</ID>
+  </Carrier>
+  <StatusOrder>ПОДТВЕРЖДЕН</StatusOrder>
+  <StatusDelivered>ПОДТВЕРЖДЕН</StatusDelivered>
+  <StatusProcessOrder>ЗАВЕРШЕН</StatusProcessOrder>
+  <Goods>
+    <Goods1>
+      <GoodsID>2</GoodsID>
+      <ShopID>7</ShopID>
+      <AmountOrdered>41</AmountOrdered>
+      <AmountDelivered>20</AmountDelivered>
+    </Goods1>
+    <Goods2>
+      <GoodsID>2</GoodsID>
+      <ShopID>10</ShopID>
+      <AmountOrdered>96</AmountOrdered>
+      <AmountDelivered>4</AmountDelivered>
+    </Goods2>
+    <Goods3>
+      <GoodsID>2</GoodsID>
+      <ShopID>10</ShopID>
+      <AmountOrdered>96</AmountOrdered>
+      <AmountDelivered>4</AmountDelivered>
+    </Goods3>
+  </Goods>
+</Root>

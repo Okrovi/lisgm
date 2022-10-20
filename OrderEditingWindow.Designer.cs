@@ -42,7 +42,7 @@
             this.labelOrderEndText = new System.Windows.Forms.Label();
             this.labelOrderEndValue = new System.Windows.Forms.Label();
             this.groupBoxItem = new System.Windows.Forms.GroupBox();
-            this.tableLayoutPanelAddedGoods = new System.Windows.Forms.TableLayoutPanel();
+            this.flowLayoutPanelListProd = new System.Windows.Forms.FlowLayoutPanel();
             this.listBoxDetailsSupplier = new System.Windows.Forms.ListBox();
             this.listBoxDetailsCarrier = new System.Windows.Forms.ListBox();
             this.labelManager = new System.Windows.Forms.Label();
@@ -74,9 +74,10 @@
             // buttonSave
             // 
             this.buttonSave.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(90)))), ((int)(((byte)(166)))));
-            this.buttonSave.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.buttonSave.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.buttonSave.ForeColor = System.Drawing.Color.White;
             this.buttonSave.Location = new System.Drawing.Point(481, 622);
+            this.buttonSave.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.buttonSave.Name = "buttonSave";
             this.buttonSave.Size = new System.Drawing.Size(250, 27);
             this.buttonSave.TabIndex = 2;
@@ -88,10 +89,11 @@
             // 
             this.buttonValueSupplier.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(90)))), ((int)(((byte)(166)))));
             this.buttonValueSupplier.Enabled = false;
-            this.buttonValueSupplier.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.buttonValueSupplier.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.buttonValueSupplier.ForeColor = System.Drawing.Color.White;
             this.buttonValueSupplier.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonValueSupplier.Location = new System.Drawing.Point(12, 119);
+            this.buttonValueSupplier.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.buttonValueSupplier.Name = "buttonValueSupplier";
             this.buttonValueSupplier.Size = new System.Drawing.Size(198, 27);
             this.buttonValueSupplier.TabIndex = 3;
@@ -103,9 +105,10 @@
             // 
             this.buttonValueCarrier.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(90)))), ((int)(((byte)(166)))));
             this.buttonValueCarrier.Enabled = false;
-            this.buttonValueCarrier.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.buttonValueCarrier.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.buttonValueCarrier.ForeColor = System.Drawing.Color.White;
             this.buttonValueCarrier.Location = new System.Drawing.Point(12, 399);
+            this.buttonValueCarrier.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.buttonValueCarrier.Name = "buttonValueCarrier";
             this.buttonValueCarrier.Size = new System.Drawing.Size(198, 27);
             this.buttonValueCarrier.TabIndex = 4;
@@ -120,17 +123,19 @@
             this.panel1.Controls.Add(this.buttonRemItem);
             this.panel1.Controls.Add(this.buttonAddItem);
             this.panel1.Location = new System.Drawing.Point(229, 117);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(743, 27);
+            this.panel1.Size = new System.Drawing.Size(742, 27);
             this.panel1.TabIndex = 10;
             // 
             // buttonDelireved
             // 
             this.buttonDelireved.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(90)))), ((int)(((byte)(166)))));
             this.buttonDelireved.Enabled = false;
-            this.buttonDelireved.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.buttonDelireved.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.buttonDelireved.ForeColor = System.Drawing.Color.White;
             this.buttonDelireved.Location = new System.Drawing.Point(619, 4);
+            this.buttonDelireved.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.buttonDelireved.Name = "buttonDelireved";
             this.buttonDelireved.Size = new System.Drawing.Size(121, 23);
             this.buttonDelireved.TabIndex = 3;
@@ -142,9 +147,10 @@
             // 
             this.buttonRemItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(90)))), ((int)(((byte)(166)))));
             this.buttonRemItem.Enabled = false;
-            this.buttonRemItem.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.buttonRemItem.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.buttonRemItem.ForeColor = System.Drawing.Color.White;
             this.buttonRemItem.Location = new System.Drawing.Point(130, 4);
+            this.buttonRemItem.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.buttonRemItem.Name = "buttonRemItem";
             this.buttonRemItem.Size = new System.Drawing.Size(121, 23);
             this.buttonRemItem.TabIndex = 1;
@@ -156,9 +162,10 @@
             // 
             this.buttonAddItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(90)))), ((int)(((byte)(166)))));
             this.buttonAddItem.Enabled = false;
-            this.buttonAddItem.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.buttonAddItem.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.buttonAddItem.ForeColor = System.Drawing.Color.White;
-            this.buttonAddItem.Location = new System.Drawing.Point(3, 4);
+            this.buttonAddItem.Location = new System.Drawing.Point(2, 4);
+            this.buttonAddItem.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.buttonAddItem.Name = "buttonAddItem";
             this.buttonAddItem.Size = new System.Drawing.Size(121, 23);
             this.buttonAddItem.TabIndex = 0;
@@ -168,8 +175,9 @@
             // 
             // buttonExit
             // 
-            this.buttonExit.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.buttonExit.Location = new System.Drawing.Point(737, 623);
+            this.buttonExit.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.buttonExit.Location = new System.Drawing.Point(738, 623);
+            this.buttonExit.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.buttonExit.Name = "buttonExit";
             this.buttonExit.Size = new System.Drawing.Size(235, 26);
             this.buttonExit.TabIndex = 12;
@@ -179,9 +187,9 @@
             // 
             // labelOrderStartText
             // 
-            this.labelOrderStartText.AutoSize = true;
-            this.labelOrderStartText.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.labelOrderStartText.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.labelOrderStartText.Location = new System.Drawing.Point(12, 9);
+            this.labelOrderStartText.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelOrderStartText.Name = "labelOrderStartText";
             this.labelOrderStartText.Size = new System.Drawing.Size(93, 15);
             this.labelOrderStartText.TabIndex = 13;
@@ -190,17 +198,19 @@
             // labelOrderStartValue
             // 
             this.labelOrderStartValue.AutoSize = true;
+            this.labelOrderStartValue.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.labelOrderStartValue.Location = new System.Drawing.Point(111, 9);
+            this.labelOrderStartValue.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelOrderStartValue.Name = "labelOrderStartValue";
-            this.labelOrderStartValue.Size = new System.Drawing.Size(92, 15);
+            this.labelOrderStartValue.Size = new System.Drawing.Size(77, 12);
             this.labelOrderStartValue.TabIndex = 14;
             this.labelOrderStartValue.Text = "ОШИБКА ДАТЫ";
             // 
             // labelOrderEndText
             // 
-            this.labelOrderEndText.AutoSize = true;
-            this.labelOrderEndText.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.labelOrderEndText.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.labelOrderEndText.Location = new System.Drawing.Point(294, 9);
+            this.labelOrderEndText.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelOrderEndText.Name = "labelOrderEndText";
             this.labelOrderEndText.Size = new System.Drawing.Size(111, 15);
             this.labelOrderEndText.TabIndex = 15;
@@ -209,51 +219,45 @@
             // labelOrderEndValue
             // 
             this.labelOrderEndValue.AutoSize = true;
+            this.labelOrderEndValue.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.labelOrderEndValue.Location = new System.Drawing.Point(411, 9);
+            this.labelOrderEndValue.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelOrderEndValue.Name = "labelOrderEndValue";
-            this.labelOrderEndValue.Size = new System.Drawing.Size(86, 15);
+            this.labelOrderEndValue.Size = new System.Drawing.Size(70, 12);
             this.labelOrderEndValue.TabIndex = 16;
             this.labelOrderEndValue.Text = "НЕ ЗАВЕРШЕН";
             // 
             // groupBoxItem
             // 
             this.groupBoxItem.BackColor = System.Drawing.Color.White;
-            this.groupBoxItem.Controls.Add(this.tableLayoutPanelAddedGoods);
+            this.groupBoxItem.Controls.Add(this.flowLayoutPanelListProd);
             this.groupBoxItem.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.groupBoxItem.ForeColor = System.Drawing.Color.Black;
             this.groupBoxItem.Location = new System.Drawing.Point(232, 191);
+            this.groupBoxItem.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.groupBoxItem.Name = "groupBoxItem";
-            this.groupBoxItem.Size = new System.Drawing.Size(740, 403);
+            this.groupBoxItem.Padding = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.groupBoxItem.Size = new System.Drawing.Size(740, 401);
             this.groupBoxItem.TabIndex = 17;
             this.groupBoxItem.TabStop = false;
             this.groupBoxItem.Text = "Заказанные товары";
             // 
-            // tableLayoutPanelAddedGoods
+            // flowLayoutPanelListProd
             // 
-            this.tableLayoutPanelAddedGoods.AutoScroll = true;
-            this.tableLayoutPanelAddedGoods.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.tableLayoutPanelAddedGoods.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.tableLayoutPanelAddedGoods.ColumnCount = 8;
-            this.tableLayoutPanelAddedGoods.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 30F));
-            this.tableLayoutPanelAddedGoods.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 120F));
-            this.tableLayoutPanelAddedGoods.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 60F));
-            this.tableLayoutPanelAddedGoods.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 120F));
-            this.tableLayoutPanelAddedGoods.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 180F));
-            this.tableLayoutPanelAddedGoods.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 60F));
-            this.tableLayoutPanelAddedGoods.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 60F));
-            this.tableLayoutPanelAddedGoods.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-            this.tableLayoutPanelAddedGoods.Location = new System.Drawing.Point(3, 19);
-            this.tableLayoutPanelAddedGoods.Name = "tableLayoutPanelAddedGoods";
-            this.tableLayoutPanelAddedGoods.RowCount = 1;
-            this.tableLayoutPanelAddedGoods.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
-            this.tableLayoutPanelAddedGoods.Size = new System.Drawing.Size(734, 381);
-            this.tableLayoutPanelAddedGoods.TabIndex = 0;
+            this.flowLayoutPanelListProd.AutoScroll = true;
+            this.flowLayoutPanelListProd.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.flowLayoutPanelListProd.Location = new System.Drawing.Point(2, 19);
+            this.flowLayoutPanelListProd.Name = "flowLayoutPanelListProd";
+            this.flowLayoutPanelListProd.Size = new System.Drawing.Size(736, 379);
+            this.flowLayoutPanelListProd.TabIndex = 0;
             // 
             // listBoxDetailsSupplier
             // 
+            this.listBoxDetailsSupplier.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.listBoxDetailsSupplier.FormattingEnabled = true;
             this.listBoxDetailsSupplier.ItemHeight = 15;
             this.listBoxDetailsSupplier.Location = new System.Drawing.Point(12, 185);
+            this.listBoxDetailsSupplier.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.listBoxDetailsSupplier.Name = "listBoxDetailsSupplier";
             this.listBoxDetailsSupplier.SelectionMode = System.Windows.Forms.SelectionMode.None;
             this.listBoxDetailsSupplier.Size = new System.Drawing.Size(198, 184);
@@ -261,9 +265,11 @@
             // 
             // listBoxDetailsCarrier
             // 
+            this.listBoxDetailsCarrier.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.listBoxDetailsCarrier.FormattingEnabled = true;
             this.listBoxDetailsCarrier.ItemHeight = 15;
             this.listBoxDetailsCarrier.Location = new System.Drawing.Point(12, 465);
+            this.listBoxDetailsCarrier.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.listBoxDetailsCarrier.Name = "listBoxDetailsCarrier";
             this.listBoxDetailsCarrier.SelectionMode = System.Windows.Forms.SelectionMode.None;
             this.listBoxDetailsCarrier.Size = new System.Drawing.Size(198, 184);
@@ -271,9 +277,9 @@
             // 
             // labelManager
             // 
-            this.labelManager.AutoSize = true;
-            this.labelManager.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.labelManager.Location = new System.Drawing.Point(12, 42);
+            this.labelManager.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.labelManager.Location = new System.Drawing.Point(12, 41);
+            this.labelManager.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelManager.Name = "labelManager";
             this.labelManager.Size = new System.Drawing.Size(73, 15);
             this.labelManager.TabIndex = 22;
@@ -281,9 +287,9 @@
             // 
             // labelLogistican
             // 
-            this.labelLogistican.AutoSize = true;
-            this.labelLogistican.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.labelLogistican.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.labelLogistican.Location = new System.Drawing.Point(12, 70);
+            this.labelLogistican.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelLogistican.Name = "labelLogistican";
             this.labelLogistican.Size = new System.Drawing.Size(50, 15);
             this.labelLogistican.TabIndex = 23;
@@ -292,18 +298,22 @@
             // labelValueManager
             // 
             this.labelValueManager.AutoSize = true;
-            this.labelValueManager.Location = new System.Drawing.Point(111, 42);
+            this.labelValueManager.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.labelValueManager.Location = new System.Drawing.Point(111, 41);
+            this.labelValueManager.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelValueManager.Name = "labelValueManager";
-            this.labelValueManager.Size = new System.Drawing.Size(125, 15);
+            this.labelValueManager.Size = new System.Drawing.Size(104, 12);
             this.labelValueManager.TabIndex = 24;
             this.labelValueManager.Text = "ОШИБКА МЕНЕДЖЕР";
             // 
             // labelValueLogistican
             // 
             this.labelValueLogistican.AutoSize = true;
+            this.labelValueLogistican.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.labelValueLogistican.Location = new System.Drawing.Point(111, 70);
+            this.labelValueLogistican.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelValueLogistican.Name = "labelValueLogistican";
-            this.labelValueLogistican.Size = new System.Drawing.Size(81, 15);
+            this.labelValueLogistican.Size = new System.Drawing.Size(66, 12);
             this.labelValueLogistican.TabIndex = 25;
             this.labelValueLogistican.Text = "НЕТ ДАННЫХ";
             // 
@@ -311,9 +321,10 @@
             // 
             this.buttonConfirmSupplier.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(90)))), ((int)(((byte)(166)))));
             this.buttonConfirmSupplier.Enabled = false;
-            this.buttonConfirmSupplier.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.buttonConfirmSupplier.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.buttonConfirmSupplier.ForeColor = System.Drawing.Color.White;
             this.buttonConfirmSupplier.Location = new System.Drawing.Point(12, 152);
+            this.buttonConfirmSupplier.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.buttonConfirmSupplier.Name = "buttonConfirmSupplier";
             this.buttonConfirmSupplier.Size = new System.Drawing.Size(198, 27);
             this.buttonConfirmSupplier.TabIndex = 26;
@@ -325,9 +336,10 @@
             // 
             this.buttonConfirmCarrier.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(90)))), ((int)(((byte)(166)))));
             this.buttonConfirmCarrier.Enabled = false;
-            this.buttonConfirmCarrier.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.buttonConfirmCarrier.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.buttonConfirmCarrier.ForeColor = System.Drawing.Color.White;
             this.buttonConfirmCarrier.Location = new System.Drawing.Point(12, 432);
+            this.buttonConfirmCarrier.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.buttonConfirmCarrier.Name = "buttonConfirmCarrier";
             this.buttonConfirmCarrier.Size = new System.Drawing.Size(198, 27);
             this.buttonConfirmCarrier.TabIndex = 27;
@@ -339,9 +351,10 @@
             // 
             this.buttonOrderComlection.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(90)))), ((int)(((byte)(166)))));
             this.buttonOrderComlection.Enabled = false;
-            this.buttonOrderComlection.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.buttonOrderComlection.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.buttonOrderComlection.ForeColor = System.Drawing.Color.White;
             this.buttonOrderComlection.Location = new System.Drawing.Point(722, 12);
+            this.buttonOrderComlection.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.buttonOrderComlection.Name = "buttonOrderComlection";
             this.buttonOrderComlection.Size = new System.Drawing.Size(250, 27);
             this.buttonOrderComlection.TabIndex = 28;
@@ -352,9 +365,10 @@
             // buttonSaveDataInFile
             // 
             this.buttonSaveDataInFile.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(90)))), ((int)(((byte)(166)))));
-            this.buttonSaveDataInFile.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.buttonSaveDataInFile.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.buttonSaveDataInFile.ForeColor = System.Drawing.Color.White;
-            this.buttonSaveDataInFile.Location = new System.Drawing.Point(722, 42);
+            this.buttonSaveDataInFile.Location = new System.Drawing.Point(722, 41);
+            this.buttonSaveDataInFile.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.buttonSaveDataInFile.Name = "buttonSaveDataInFile";
             this.buttonSaveDataInFile.Size = new System.Drawing.Size(250, 27);
             this.buttonSaveDataInFile.TabIndex = 29;
@@ -379,7 +393,8 @@
             this.tableLayoutPanel1.Controls.Add(this.pictureBox4, 4, 0);
             this.tableLayoutPanel1.Controls.Add(this.pictureBox5, 5, 0);
             this.tableLayoutPanel1.Controls.Add(this.pictureBox6, 6, 0);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(235, 150);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(235, 151);
+            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
@@ -389,7 +404,8 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(33, 3);
+            this.pictureBox1.Location = new System.Drawing.Point(32, 3);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(32, 32);
             this.pictureBox1.TabIndex = 0;
@@ -399,7 +415,8 @@
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
             this.pictureBox2.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox2.InitialImage")));
-            this.pictureBox2.Location = new System.Drawing.Point(153, 3);
+            this.pictureBox2.Location = new System.Drawing.Point(152, 3);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(32, 32);
             this.pictureBox2.TabIndex = 1;
@@ -408,7 +425,8 @@
             // pictureBox3
             // 
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(213, 3);
+            this.pictureBox3.Location = new System.Drawing.Point(212, 3);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(32, 32);
             this.pictureBox3.TabIndex = 2;
@@ -417,7 +435,8 @@
             // pictureBox4
             // 
             this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(333, 3);
+            this.pictureBox4.Location = new System.Drawing.Point(332, 3);
+            this.pictureBox4.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(32, 32);
             this.pictureBox4.TabIndex = 3;
@@ -426,7 +445,8 @@
             // pictureBox5
             // 
             this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
-            this.pictureBox5.Location = new System.Drawing.Point(513, 3);
+            this.pictureBox5.Location = new System.Drawing.Point(512, 3);
+            this.pictureBox5.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(32, 32);
             this.pictureBox5.TabIndex = 4;
@@ -435,7 +455,8 @@
             // pictureBox6
             // 
             this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
-            this.pictureBox6.Location = new System.Drawing.Point(573, 3);
+            this.pictureBox6.Location = new System.Drawing.Point(572, 3);
+            this.pictureBox6.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.pictureBox6.Name = "pictureBox6";
             this.pictureBox6.Size = new System.Drawing.Size(32, 32);
             this.pictureBox6.TabIndex = 5;
@@ -443,8 +464,9 @@
             // 
             // OrderEditingWindow
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(5F, 12F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(984, 661);
             this.ControlBox = false;
@@ -469,6 +491,8 @@
             this.Controls.Add(this.buttonValueCarrier);
             this.Controls.Add(this.buttonValueSupplier);
             this.Controls.Add(this.buttonSave);
+            this.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(1000, 700);
             this.MinimizeBox = false;
@@ -504,7 +528,6 @@
         private Label labelOrderEndText;
         private Label labelOrderEndValue;
         private GroupBox groupBoxItem;
-        private TableLayoutPanel tableLayoutPanelAddedGoods;
         private ListBox listBoxDetailsSupplier;
         private ListBox listBoxDetailsCarrier;
         private Button buttonDelireved;
@@ -523,5 +546,6 @@
         private PictureBox pictureBox4;
         private PictureBox pictureBox5;
         private PictureBox pictureBox6;
+        private FlowLayoutPanel flowLayoutPanelListProd;
     }
 }

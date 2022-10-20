@@ -10,6 +10,12 @@ namespace LISGM
 
         static void Main()
         {
+            ConfigurationData configurationData = new ConfigurationData();
+            if (configurationData.loadConf() == -1)
+            {
+                MessageBox.Show("Проблема с сохранением файла конфигурации!", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
             ApplicationConfiguration.Initialize();
             Application.Run(new AuthorizationsWindow());
         }

@@ -39,7 +39,7 @@
             this.labelTypeShop = new System.Windows.Forms.Label();
             this.comboBoxTypeShop = new System.Windows.Forms.ComboBox();
             this.groupBoxShop = new System.Windows.Forms.GroupBox();
-            this.tableLayoutPanelShop = new System.Windows.Forms.TableLayoutPanel();
+            this.flowLayoutPanelListShop = new System.Windows.Forms.FlowLayoutPanel();
             this.buttonClose = new System.Windows.Forms.Button();
             this.textBoxAmount = new System.Windows.Forms.TextBox();
             this.labelAmount = new System.Windows.Forms.Label();
@@ -81,7 +81,7 @@
             this.groupBoxChoiceShop.ForeColor = System.Drawing.Color.Black;
             this.groupBoxChoiceShop.Location = new System.Drawing.Point(12, 73);
             this.groupBoxChoiceShop.Name = "groupBoxChoiceShop";
-            this.groupBoxChoiceShop.Size = new System.Drawing.Size(175, 353);
+            this.groupBoxChoiceShop.Size = new System.Drawing.Size(175, 338);
             this.groupBoxChoiceShop.TabIndex = 2;
             this.groupBoxChoiceShop.TabStop = false;
             this.groupBoxChoiceShop.Text = "Выбор торговой точки";
@@ -89,7 +89,7 @@
             // buttonShowShop
             // 
             this.buttonShowShop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(90)))), ((int)(((byte)(166)))));
-            this.buttonShowShop.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.buttonShowShop.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.buttonShowShop.ForeColor = System.Drawing.Color.White;
             this.buttonShowShop.Location = new System.Drawing.Point(6, 208);
             this.buttonShowShop.Name = "buttonShowShop";
@@ -158,35 +158,29 @@
             // 
             // groupBoxShop
             // 
-            this.groupBoxShop.Controls.Add(this.tableLayoutPanelShop);
+            this.groupBoxShop.Controls.Add(this.flowLayoutPanelListShop);
             this.groupBoxShop.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.groupBoxShop.ForeColor = System.Drawing.Color.Black;
             this.groupBoxShop.Location = new System.Drawing.Point(193, 73);
             this.groupBoxShop.Name = "groupBoxShop";
-            this.groupBoxShop.Size = new System.Drawing.Size(479, 353);
+            this.groupBoxShop.Size = new System.Drawing.Size(479, 338);
             this.groupBoxShop.TabIndex = 3;
             this.groupBoxShop.TabStop = false;
             this.groupBoxShop.Text = "Торговые точки";
             // 
-            // tableLayoutPanelShop
+            // flowLayoutPanelListShop
             // 
-            this.tableLayoutPanelShop.AutoScroll = true;
-            this.tableLayoutPanelShop.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.tableLayoutPanelShop.ColumnCount = 3;
-            this.tableLayoutPanelShop.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 30F));
-            this.tableLayoutPanelShop.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 150F));
-            this.tableLayoutPanelShop.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-            this.tableLayoutPanelShop.Location = new System.Drawing.Point(3, 19);
-            this.tableLayoutPanelShop.Name = "tableLayoutPanelShop";
-            this.tableLayoutPanelShop.RowCount = 1;
-            this.tableLayoutPanelShop.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
-            this.tableLayoutPanelShop.Size = new System.Drawing.Size(473, 331);
-            this.tableLayoutPanelShop.TabIndex = 0;
+            this.flowLayoutPanelListShop.AutoScroll = true;
+            this.flowLayoutPanelListShop.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.flowLayoutPanelListShop.Location = new System.Drawing.Point(3, 19);
+            this.flowLayoutPanelListShop.Name = "flowLayoutPanelListShop";
+            this.flowLayoutPanelListShop.Size = new System.Drawing.Size(473, 316);
+            this.flowLayoutPanelListShop.TabIndex = 0;
             // 
             // buttonClose
             // 
-            this.buttonClose.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.buttonClose.Location = new System.Drawing.Point(12, 432);
+            this.buttonClose.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.buttonClose.Location = new System.Drawing.Point(12, 422);
             this.buttonClose.Name = "buttonClose";
             this.buttonClose.Size = new System.Drawing.Size(175, 27);
             this.buttonClose.TabIndex = 4;
@@ -215,7 +209,7 @@
             // buttonAddProduct
             // 
             this.buttonAddProduct.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(90)))), ((int)(((byte)(166)))));
-            this.buttonAddProduct.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.buttonAddProduct.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.buttonAddProduct.ForeColor = System.Drawing.Color.White;
             this.buttonAddProduct.Location = new System.Drawing.Point(497, 27);
             this.buttonAddProduct.Name = "buttonAddProduct";
@@ -237,8 +231,9 @@
             // 
             // ProductSelectionWindow
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(684, 461);
             this.ControlBox = false;
@@ -278,11 +273,11 @@
         private Label labelTypeShop;
         private ComboBox comboBoxTypeShop;
         private GroupBox groupBoxShop;
-        private TableLayoutPanel tableLayoutPanelShop;
         private Button buttonClose;
         private TextBox textBoxAmount;
         private Label labelAmount;
         private Button buttonAddProduct;
         private Label labelUnit;
+        private FlowLayoutPanel flowLayoutPanelListShop;
     }
 }

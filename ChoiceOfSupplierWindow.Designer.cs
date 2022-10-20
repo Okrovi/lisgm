@@ -35,7 +35,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.buttonClose = new System.Windows.Forms.Button();
             this.groupBoxSupplier = new System.Windows.Forms.GroupBox();
-            this.tableLayoutPanelSupplier = new System.Windows.Forms.TableLayoutPanel();
+            this.flowLayoutPanelListSupplier = new System.Windows.Forms.FlowLayoutPanel();
             this.groupBoxSupplier.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -91,8 +91,8 @@
             // 
             // buttonClose
             // 
-            this.buttonClose.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.buttonClose.Location = new System.Drawing.Point(12, 430);
+            this.buttonClose.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.buttonClose.Location = new System.Drawing.Point(12, 422);
             this.buttonClose.Name = "buttonClose";
             this.buttonClose.Size = new System.Drawing.Size(176, 27);
             this.buttonClose.TabIndex = 12;
@@ -102,35 +102,28 @@
             // 
             // groupBoxSupplier
             // 
-            this.groupBoxSupplier.Controls.Add(this.tableLayoutPanelSupplier);
+            this.groupBoxSupplier.Controls.Add(this.flowLayoutPanelListSupplier);
             this.groupBoxSupplier.Location = new System.Drawing.Point(12, 57);
             this.groupBoxSupplier.Name = "groupBoxSupplier";
-            this.groupBoxSupplier.Size = new System.Drawing.Size(760, 333);
+            this.groupBoxSupplier.Size = new System.Drawing.Size(760, 340);
             this.groupBoxSupplier.TabIndex = 13;
             this.groupBoxSupplier.TabStop = false;
             this.groupBoxSupplier.Text = "Поставщики";
             // 
-            // tableLayoutPanelSupplier
+            // flowLayoutPanelListSupplier
             // 
-            this.tableLayoutPanelSupplier.AutoScroll = true;
-            this.tableLayoutPanelSupplier.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.tableLayoutPanelSupplier.ColumnCount = 4;
-            this.tableLayoutPanelSupplier.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 80F));
-            this.tableLayoutPanelSupplier.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 80F));
-            this.tableLayoutPanelSupplier.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 200F));
-            this.tableLayoutPanelSupplier.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-            this.tableLayoutPanelSupplier.GrowStyle = System.Windows.Forms.TableLayoutPanelGrowStyle.AddColumns;
-            this.tableLayoutPanelSupplier.Location = new System.Drawing.Point(3, 19);
-            this.tableLayoutPanelSupplier.Name = "tableLayoutPanelSupplier";
-            this.tableLayoutPanelSupplier.RowCount = 1;
-            this.tableLayoutPanelSupplier.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
-            this.tableLayoutPanelSupplier.Size = new System.Drawing.Size(754, 311);
-            this.tableLayoutPanelSupplier.TabIndex = 0;
+            this.flowLayoutPanelListSupplier.AutoScroll = true;
+            this.flowLayoutPanelListSupplier.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.flowLayoutPanelListSupplier.Location = new System.Drawing.Point(3, 19);
+            this.flowLayoutPanelListSupplier.Name = "flowLayoutPanelListSupplier";
+            this.flowLayoutPanelListSupplier.Size = new System.Drawing.Size(754, 318);
+            this.flowLayoutPanelListSupplier.TabIndex = 0;
             // 
             // ChoiceOfSupplierWindow
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(784, 461);
             this.ControlBox = false;
@@ -161,6 +154,6 @@
         private Label label3;
         private Button buttonClose;
         private GroupBox groupBoxSupplier;
-        private TableLayoutPanel tableLayoutPanelSupplier;
+        private FlowLayoutPanel flowLayoutPanelListSupplier;
     }
 }

@@ -35,7 +35,7 @@
             this.buttonTransportBySupplier = new System.Windows.Forms.Button();
             this.buttonShow = new System.Windows.Forms.Button();
             this.groupBoxCarrier = new System.Windows.Forms.GroupBox();
-            this.tableLayoutPanelCarrier = new System.Windows.Forms.TableLayoutPanel();
+            this.flowLayoutPanelListCarrier = new System.Windows.Forms.FlowLayoutPanel();
             this.buttonClose = new System.Windows.Forms.Button();
             this.groupBoxCarrier.SuspendLayout();
             this.SuspendLayout();
@@ -81,7 +81,7 @@
             // 
             this.buttonTransportBySupplier.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(90)))), ((int)(((byte)(166)))));
             this.buttonTransportBySupplier.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.buttonTransportBySupplier.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.buttonTransportBySupplier.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.buttonTransportBySupplier.ForeColor = System.Drawing.Color.White;
             this.buttonTransportBySupplier.Location = new System.Drawing.Point(350, 26);
             this.buttonTransportBySupplier.Name = "buttonTransportBySupplier";
@@ -106,7 +106,7 @@
             // 
             // groupBoxCarrier
             // 
-            this.groupBoxCarrier.Controls.Add(this.tableLayoutPanelCarrier);
+            this.groupBoxCarrier.Controls.Add(this.flowLayoutPanelListCarrier);
             this.groupBoxCarrier.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.groupBoxCarrier.ForeColor = System.Drawing.Color.Black;
             this.groupBoxCarrier.Location = new System.Drawing.Point(12, 55);
@@ -116,27 +116,19 @@
             this.groupBoxCarrier.TabStop = false;
             this.groupBoxCarrier.Text = "Перевозчики";
             // 
-            // tableLayoutPanelCarrier
+            // flowLayoutPanelListCarrier
             // 
-            this.tableLayoutPanelCarrier.AutoScroll = true;
-            this.tableLayoutPanelCarrier.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.tableLayoutPanelCarrier.ColumnCount = 4;
-            this.tableLayoutPanelCarrier.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 80F));
-            this.tableLayoutPanelCarrier.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 80F));
-            this.tableLayoutPanelCarrier.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 200F));
-            this.tableLayoutPanelCarrier.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-            this.tableLayoutPanelCarrier.ForeColor = System.Drawing.Color.Black;
-            this.tableLayoutPanelCarrier.Location = new System.Drawing.Point(3, 19);
-            this.tableLayoutPanelCarrier.Name = "tableLayoutPanelCarrier";
-            this.tableLayoutPanelCarrier.RowCount = 1;
-            this.tableLayoutPanelCarrier.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
-            this.tableLayoutPanelCarrier.Size = new System.Drawing.Size(754, 316);
-            this.tableLayoutPanelCarrier.TabIndex = 0;
+            this.flowLayoutPanelListCarrier.AutoScroll = true;
+            this.flowLayoutPanelListCarrier.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.flowLayoutPanelListCarrier.Location = new System.Drawing.Point(3, 19);
+            this.flowLayoutPanelListCarrier.Name = "flowLayoutPanelListCarrier";
+            this.flowLayoutPanelListCarrier.Size = new System.Drawing.Size(754, 316);
+            this.flowLayoutPanelListCarrier.TabIndex = 0;
             // 
             // buttonClose
             // 
-            this.buttonClose.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.buttonClose.Location = new System.Drawing.Point(12, 428);
+            this.buttonClose.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.buttonClose.Location = new System.Drawing.Point(12, 422);
             this.buttonClose.Name = "buttonClose";
             this.buttonClose.Size = new System.Drawing.Size(176, 27);
             this.buttonClose.TabIndex = 7;
@@ -146,8 +138,9 @@
             // 
             // ChoiceOfCarrierWindow
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(784, 461);
             this.ControlBox = false;
@@ -181,6 +174,6 @@
         private Button buttonShow;
         private GroupBox groupBoxCarrier;
         private Button buttonClose;
-        private TableLayoutPanel tableLayoutPanelCarrier;
+        private FlowLayoutPanel flowLayoutPanelListCarrier;
     }
 }

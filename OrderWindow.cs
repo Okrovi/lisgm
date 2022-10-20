@@ -6,7 +6,8 @@
         UserApp userApp = new UserApp();
         DatabaseInteraction databaseInteraction = new DatabaseInteraction();
         DataDB dataDB = new DataDB();
-        
+
+        private int goToAuthorizationWindow { get; set; }
 
         public OrderWindow()
         {
@@ -30,12 +31,15 @@
 
         private void buttonExit_Click(object sender, EventArgs e)
         {
+            goToAuthorizationWindow = 1;
             this.screenAuthorizations.Show();
             this.Close();
         }
 
         private void OrderWindow_Load(object sender, EventArgs e)
         {
+            goToAuthorizationWindow = 0;
+
             fillingOrderField(0);
             
             if(userApp.employeesPosition == databaseInteraction.EMPPOSMANAGER || userApp.employeesPosition == databaseInteraction.EMPPOSADMIN)
@@ -217,7 +221,7 @@
                 labelOrderDateStart.Location = new System.Drawing.Point(3, 20);
                 labelOrderDateStart.Name = "labelOrderDateStart";
                 labelOrderDateStart.Size = new System.Drawing.Size(69, 15);
-                labelOrderDateStart.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+                labelOrderDateStart.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
                 labelOrderDateStart.ForeColor = System.Drawing.Color.Black;
                 labelOrderDateStart.TabIndex = 2;
                 labelOrderDateStart.Text = "Дата заказа:";
@@ -226,7 +230,7 @@
                 labelOrderDateStartValue.Location = new System.Drawing.Point(123, 20);
                 labelOrderDateStartValue.Name = "labelOrderDateStartValue";
                 labelOrderDateStartValue.Size = new System.Drawing.Size(61, 15);
-                labelOrderDateStartValue.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+                labelOrderDateStartValue.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
                 labelOrderDateStartValue.ForeColor = System.Drawing.Color.Black;
                 labelOrderDateStartValue.TabIndex = 10;
                 labelOrderDateStartValue.Text = dataDB.receivedData[i == 0 ? columnStartDate : columnStartDate = columnStartDate + dataDB.columnCount];
@@ -235,7 +239,7 @@
                 labelOrderDateEnd.Location = new System.Drawing.Point(3, 35);
                 labelOrderDateEnd.Name = "labelOrderDateEnd";
                 labelOrderDateEnd.Size = new System.Drawing.Size(102, 15);
-                labelOrderDateEnd.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+                labelOrderDateEnd.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
                 labelOrderDateEnd.ForeColor = System.Drawing.Color.Black;
                 labelOrderDateEnd.TabIndex = 7;
                 labelOrderDateEnd.Text = "Дата завершения:";
@@ -244,7 +248,7 @@
                 labelOrderDateEndValue.Location = new System.Drawing.Point(123, 35);
                 labelOrderDateEndValue.Name = "labelOrderDateEndValue";
                 labelOrderDateEndValue.Size = new System.Drawing.Size(61, 15);
-                labelOrderDateEndValue.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+                labelOrderDateEndValue.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
                 labelOrderDateEndValue.ForeColor = System.Drawing.Color.Black;
                 labelOrderDateEndValue.TabIndex = 11;
                 labelOrderDateEndValue.Text = dataDB.receivedData[i == 0 ? columnEndDate : columnEndDate = columnEndDate + dataDB.columnCount];
@@ -366,7 +370,10 @@
 
         private void OrderWindow_FormClosed(object sender, FormClosedEventArgs e)
         {
-            Application.Exit();
+            if(goToAuthorizationWindow == 0)
+            {
+                Application.Exit();
+            }            
         }
     }
 }
