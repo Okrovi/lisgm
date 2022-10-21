@@ -240,86 +240,18 @@ namespace LISGM
                                         Regex regex = new Regex(@",");
                                         string newstring = regex.Replace(textBoxAmount.Text, ".");
 
-                                        orderEditingWindow.goodsInOrderAdder[j] = new string[6];
+                                        orderEditingWindow.goodsInOrderAdder[j] = new string[9];
                                         orderEditingWindow.goodsInOrderAdder[j][0] = orderEditingWindow.dataOrder.id;
                                         orderEditingWindow.goodsInOrderAdder[j][1] = idAndNameProduct[positionInArray][0];
                                         orderEditingWindow.goodsInOrderAdder[j][2] = radioButton.Name;
                                         orderEditingWindow.goodsInOrderAdder[j][3] = newstring;
                                         orderEditingWindow.goodsInOrderAdder[j][4] = databaseInteraction.TEXTSTATUSPRODUCTSTART;
+                                        orderEditingWindow.goodsInOrderAdder[j][5] = idAndNameProduct[positionInArray][1];
+                                        orderEditingWindow.goodsInOrderAdder[j][6] = idAndNameProduct[positionInArray][2];
+                                        orderEditingWindow.goodsInOrderAdder[j][7] = textShopName.Text;
+                                        orderEditingWindow.goodsInOrderAdder[j][8] = textAdressShop.Text;
 
-                                        CheckBox checkBox = new CheckBox();
-                                        checkBox.Name = radioButton.Name;
-                                        checkBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(90)))), ((int)(((byte)(166)))));
-                                        checkBox.CheckAlign = System.Drawing.ContentAlignment.MiddleCenter;
-                                        checkBox.Location = new System.Drawing.Point(3, 3);
-                                        checkBox.Size = new System.Drawing.Size(15, 14);
-                                        checkBox.UseVisualStyleBackColor = false;
-
-                                        TextBox textBoxProductName = new TextBox();
-                                        textBoxProductName.Text = comboBoxProduct.SelectedItem.ToString();
-                                        textBoxProductName.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-                                        textBoxProductName.Location = new System.Drawing.Point(20, 3);
-                                        textBoxProductName.Name = "textBoxNameProd";
-                                        textBoxProductName.Size = new System.Drawing.Size(120, 22);
-
-                                        TextBox textBoxOccupiedVolume = new TextBox();
-                                        textBoxOccupiedVolume.Text = idAndNameProduct[positionInArray][2];
-                                        textBoxOccupiedVolume.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-                                        textBoxOccupiedVolume.Location = new System.Drawing.Point(141, 3);
-                                        textBoxOccupiedVolume.Name = "textBoxVolumeProd";
-                                        textBoxOccupiedVolume.Size = new System.Drawing.Size(60, 22);
-
-                                        TextBox textBoxShopName = new TextBox();
-                                        textBoxShopName.Name = radioButton.Name;
-                                        textBoxShopName.Text = textShopName.Text;
-                                        textBoxShopName.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-                                        textBoxShopName.Location = new System.Drawing.Point(202, 3);
-                                        textBoxShopName.Size = new System.Drawing.Size(120, 22);
-
-                                        TextBox textBoxShopAdress = new TextBox();
-                                        textBoxShopAdress.Text = textAdressShop.Text;
-                                        textBoxShopAdress.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-                                        textBoxShopAdress.Location = new System.Drawing.Point(323, 3);
-                                        textBoxShopAdress.Name = "textBoxAdress";
-                                        textBoxShopAdress.Size = new System.Drawing.Size(180, 22);
-
-                                        TextBox textBoxOrderedQuantity = new TextBox();
-                                        textBoxOrderedQuantity.Text = textBoxAmount.Text;
-                                        textBoxOrderedQuantity.MaxLength = 6;
-                                        textBoxOrderedQuantity.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-                                        textBoxOrderedQuantity.Location = new System.Drawing.Point(504, 3);
-                                        textBoxOrderedQuantity.Name = "textBoxOrderedAmount";
-                                        textBoxOrderedQuantity.Size = new System.Drawing.Size(60, 22);
-
-                                        TextBox textBoxQuantityDelivered = new TextBox();
-                                        textBoxQuantityDelivered.Text = "";
-                                        textBoxQuantityDelivered.MaxLength = 6;
-                                        textBoxQuantityDelivered.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-                                        textBoxQuantityDelivered.Location = new System.Drawing.Point(565, 3);
-                                        textBoxQuantityDelivered.Name = "textBoxDeliveredAmount";
-                                        textBoxQuantityDelivered.Size = new System.Drawing.Size(60, 22);
-
-                                        TextBox textBoxStatus = new TextBox();
-                                        textBoxStatus.Text = "ВРАБОТЕ";
-                                        textBoxStatus.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-                                        textBoxStatus.Location = new System.Drawing.Point(627, 3);
-                                        textBoxStatus.Name = "textBoxStatusOrder";
-                                        textBoxStatus.Size = new System.Drawing.Size(100, 22);
-
-                                        Panel panelSelectionInstance = new Panel();
-                                        panelSelectionInstance.Controls.Add(checkBox);
-                                        panelSelectionInstance.Controls.Add(textBoxProductName);
-                                        panelSelectionInstance.Controls.Add(textBoxOccupiedVolume);
-                                        panelSelectionInstance.Controls.Add(textBoxShopName);
-                                        panelSelectionInstance.Controls.Add(textBoxShopAdress);
-                                        panelSelectionInstance.Controls.Add(textBoxOrderedQuantity);
-                                        panelSelectionInstance.Controls.Add(textBoxQuantityDelivered);
-                                        panelSelectionInstance.Controls.Add(textBoxStatus);
-                                        panelSelectionInstance.Location = new System.Drawing.Point(3, 3);
-                                        panelSelectionInstance.Name = "panelSelectionInstance";
-                                        panelSelectionInstance.Size = new System.Drawing.Size(730, 29);
-
-                                        flowLayoutPanelListProd.Controls.Add(panelSelectionInstance);
+                                        orderEditingWindow.formationListGoods(2, positionInArray);
 
                                         this.Close();
 
